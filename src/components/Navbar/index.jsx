@@ -4,7 +4,7 @@ import InputSearch from "./InputSearch";
 const Navbar = () => {
   return (
     <div className="flex flex-col md:flex-row justify-between bg-slate-800 text-white p-4 items-center">
-      <Link href="/" className="text-2xl uppercase font-bold justify-center transition-all">
+      <Link href="/" className="text-2xl uppercase font-bold justify-center transition-all hover:text-sky-500">
         Anime list nich
       </Link>
       <InputSearch />

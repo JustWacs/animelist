@@ -11,6 +11,7 @@ const InputSearch = () => {
     if (event.key === "Enter") {
       event.preventDefault();
       const keyword = searchRef.current.value;
+      if(!keyword) return
       router.push(`/search/${keyword}`);
     }
   };
@@ -18,6 +19,7 @@ const InputSearch = () => {
   const handleSearch = (event) => {
     event.preventDefault();
     const keyword = searchRef.current.value;
+    if(!keyword) return
     router.push(`/search/${keyword}`);
   };
 
@@ -26,7 +28,7 @@ const InputSearch = () => {
       <input className=" p-2 rounded-l text-black" placeholder="Search Anime . . ." 
       onKeyDown={handleKeyDown} 
       ref={searchRef} />
-      <button className="p-2 bg-slate-900 text-white font-bold rounded-r" onClick={handleSearch}>
+      <button className="p-2 bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-r" onClick={handleSearch}>
         Search
       </button>
     </div>
